@@ -1,8 +1,10 @@
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-top: 50px;
   background: linear-gradient(to bottom right, #003366, #eaf2f8);
+  background-attachment: fixed;
 }
 
 .calculator, .display, button {
@@ -14,7 +16,7 @@ body {
   width: 330px;
   padding-bottom: 10px;
   background-color: #b7d7e8;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .display {
@@ -39,7 +41,6 @@ p {
   color: #87bdd8;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   word-break: break-word;
-  white-space: pre-wrap;
   text-align: right; 
 }
 
@@ -55,6 +56,7 @@ p {
 }
 
 button {
+  font-family: 'Quicksand', sans-serif;
   width: 70px;
   height: 70px;
   margin: 0;
@@ -80,4 +82,29 @@ button:hover {
   align-items: center;
   gap: 10px;
   padding-top: 10px;
+}
+
+footer {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer {
+  margin: 0;
+}
+
+img {
+  mix-blend-mode: multiply;
+  width: 30px;
+  height: 30px;
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: rotate(720deg);
 }
