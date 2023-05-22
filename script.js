@@ -51,7 +51,9 @@ const buttons = document.querySelectorAll('.operand');
 buttons.forEach(button => {
   button.addEventListener('click', function() {
     if (isOperator(button.textContent) && !containsOperator(bottomDisplay.textContent)) {
-      bottomDisplay.textContent += (" "  + button.textContent + " ");       
+      if (bottomDisplay.textContent !== "") {
+        bottomDisplay.textContent += (" " + button.textContent + " ");
+      }     
     }
     else if (!isOperator(button.textContent)) {
       if (button.textContent === ".") {
