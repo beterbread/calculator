@@ -56,7 +56,12 @@ buttons.forEach(button => {
         bottomDisplay.textContent +=  "-"; 
       }
       else if (arr.length === 3 && button.textContent === "-") {
-        bottomDisplay.textContent +=  "-";   
+        if (arr[2].substring(0, 1) !== '-') {
+          bottomDisplay.textContent +=  "-";   
+        }  
+      }
+      else if (bottomDisplay.textContent === "-") {
+        //make user enter a number
       }
       else if (bottomDisplay.textContent !== "" && arr.length !== 3) {
         bottomDisplay.textContent += (" " + button.textContent + " ");
