@@ -81,12 +81,6 @@ buttons.forEach(button => {
   });
 });
 
-buttons.forEach(button => {
-  button.addEventListener('hover', function () {
-
-  })
-})
-
 const clearBtn = document.querySelector('#clear');
 clearBtn.addEventListener('click', function () {
   topDisplay.textContent = "";
