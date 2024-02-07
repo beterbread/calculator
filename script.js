@@ -71,7 +71,10 @@ buttons.forEach(button => {
       if (button.textContent === ".") {
         let arr = bottomDisplay.textContent.split(" ")
         if (containsOperator(bottomDisplay.textContent)) {
-          if (!arr[2].includes(".")) {
+          if (arr.size >= 2 && !arr[2].includes(".")) {
+            bottomDisplay.textContent += button.textContent;
+          }
+          else if (arr[0].includes("-")) {
             bottomDisplay.textContent += button.textContent;
           }
         }
